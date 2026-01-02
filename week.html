@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week Overzicht - Lost in Tra(i)nslation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+        .content-section { margin-bottom: 2.5rem; }
+        h2 { margin-bottom: 1rem; color: #111; }
+        p { margin-bottom: 1rem; color: #444; line-height: 1.7; }
+        ul { list-style-type: disc; margin-left: 1.5rem; margin-bottom: 1rem; color: #444; }
+        li { margin-bottom: 0.5rem; }
+        .highlight { font-weight: bold; color: #000; }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col">
+
+    <div class="flex-grow max-w-4xl mx-auto pt-16 px-8 pb-10 w-full">
+        <a href="index.html" class="inline-flex items-center text-gray-500 hover:text-black font-bold transition mb-6">
+            <span class="mr-2">←</span> Terug naar Home
+        </a>
+        
+        <h1 id="week-title" class="text-6xl md:text-7xl font-black mb-8 tracking-tighter text-gray-900">Laden...</h1>
+        
+        <div class="bg-white p-10 md:p-16 rounded-[3rem] shadow-2xl border border-gray-100">
+            
+            <div id="content-area" class="min-h-[200px]">
+                Inhoud wordt geladen...
+            </div>
+
+            <div class="mt-16 pt-10 border-t border-gray-100 flex justify-between items-center" id="navigation-area">
+                </div>
+        </div>
+    </div>
+
+    <footer class="text-center py-8 text-gray-500 text-sm">
+        <p>Project door Exauce Mupata</p>
+        <a href="https://github.com/x" target="_blank" class="text-black font-bold hover:underline flex items-center justify-center gap-2 mt-2">
+            <svg height="20" width="20" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            Bekijk op GitHub
+        </a>
+    </footer>
+
+    <script>
+        // 1. DE DATABASE
+       // 1. DE DATABASE
+    const weekData = {
+        "1": {
+            title: "Week 1: Concept & Schetsen",
+            content: `
+                <div class="content-section">
+                    <h2 class="text-3xl font-bold text-black mb-4">Wat heb ik gemaakt?</h2>
+                    <p>In de eerste week heb ik drie <span class="highlight">low-fidelity schetsen</span> ontworpen om de basisstructuur van mijn treininformatiesysteem te verkennen.</p>
+                    <p class="text-gray-500 italic">(Zie volledige tekst in eerdere code...)</p>
+                     <ul>
+                        <li><span class="highlight">Overzichtsscherm</span></li>
+                        <li><span class="highlight">Perronscherm</span></li>
+                        <li><span class="highlight">Wagonindelingsscherm</span></li>
+                    </ul>
+                </div>
+            `
+        },
+        "2": {
+            title: "Week 2: Mid-Fidelity Prototype",
+            content: `
+                <div class="content-section">
+                    <h2 class="text-3xl font-bold mb-6 text-black">Wat heb ik gedaan?</h2>
+                    <p>Deze week heb ik mijn papieren schetsen uit week 1 omgezet naar een <span class="font-bold text-black">mid-fidelity prototype</span> in Figma.</p>
+                    <h2 class="text-3xl font-bold mb-6 mt-10 text-black">Belangrijke ontwerpbeslissingen</h2>
+                    <ul class="space-y-4">
+                        <li><span class="font-bold text-black">Iconen in de header</span> en waarschuwingen.</li>
+                        <li><span class="font-bold text-black">Vertragingsinformatie</span> duidelijk gemaakt.</li>
+                    </ul>
+                </div>
+            `
+        },
+        "3": {
+            title: "Week 3: Kleur & Hiërarchie",
+            content: `
+                <div class="content-section">
+                    <h2 class="text-3xl font-bold mb-6 text-black">Wat heb ik gedaan?</h2>
+                    <p>Deze week heb ik kleur toegevoegd aan mijn prototype. De zwart-witversie uit week 2 is omgezet naar een gekleurde versie, met de nadruk op <span class="font-bold text-black">leesbaarheid</span> en <span class="font-bold text-black">visuele hiërarchie</span>.</p>
+                    
+                    <h2 class="text-3xl font-bold mb-6 mt-10 text-black">Kleurpalet</h2>
+                    <p class="mb-4">Gemaakt via Coolors.co:</p>
+                    <ul class="space-y-3 font-medium text-gray-700">
+                        <li class="flex items-center gap-3">
+                            <span class="w-6 h-6 rounded-full bg-[#A2CCEF] border border-gray-200 shadow-sm"></span> 
+                            <span>#A2CCEF – Blauw</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="w-6 h-6 rounded-full bg-[#E1F1FF] border border-gray-200 shadow-sm"></span> 
+                            <span>#E1F1FF – Lichtblauw</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="w-6 h-6 rounded-full bg-[#FFFFFF] border border-gray-200 shadow-sm"></span> 
+                            <span>#FFFFFF – Wit</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="w-6 h-6 rounded-full bg-[#FCA311] border border-gray-200 shadow-sm"></span> 
+                            <span>#FCA311 – Oranje</span>
+                        </li>
+                    </ul>
+                    <p class="mt-4">Mijn leerkracht gaf positieve feedback over de structuur en gaf goedkeuring om de kleuren verder uit te werken.</p>
+
+                    <h2 class="text-3xl font-bold mb-6 mt-10 text-black">Motivatie & onderbouwing</h2>
+                    <p><span class="font-bold text-[#A2CCEF]">Blauw</span> straalt betrouwbaarheid en rust uit, wat goed past bij transport. <span class="font-bold text-[#FCA311]">Oranje</span> zorgt voor contrast en laat belangrijke informatie opvallen zonder te schreeuwerig te zijn. <span class="font-bold text-gray-800 bg-white border px-1">Wit</span> zorgt voor maximale leesbaarheid en een frisse uitstraling.</p>
+
+                    <h2 class="text-3xl font-bold mb-6 mt-10 text-black">Reflectie</h2>
+                    <ul class="space-y-2">
+                        <li><span class="font-bold text-black">Wat goed ging:</span> de kleuren verbeteren duidelijk de hiërarchie en bruikbaarheid van het ontwerp.</li>
+                        <li><span class="font-bold text-black">Wat beter kan:</span> het contrast optimaliseren en in de toekomst meerdere kleurpaletten testen.</li>
+                        <li><span class="font-bold text-black">Belangrijkste inzicht:</span> kleur is niet enkel decoratie, maar een functioneel ontwerpelement dat de leesbaarheid en emotie van de interface beïnvloedt.</li>
+                    </ul>
+                </div>
+            `
+        },
+        "4": {
+            title: "Week 4: Optimalisatie & Iconen",
+            content: `
+                <div class="content-section">
+                    <h2 class="text-3xl font-bold mb-6 text-black">Wat heb ik gedaan?</h2>
+                    <p>Deze week heb ik de schermen aangepast om aan de opdrachtvereisten te voldoen. Het overzichtsscherm en het perronscherm tonen nu <span class="font-bold text-black">10 treinen</span> in plaats van 7, en de schermhoogte is aangepast zodat alles zichtbaar blijft zonder te scrollen.</p>
+                    <p>Daarnaast heb ik geëxperimenteerd met <span class="font-bold text-black">Material Symbols</span> (Google Fonts) als vervanging voor mijn huidige iconen. Via AI-tools probeerde ik ze te implementeren, maar dit gaf inconsistenties in kleur, formaat en stijl. Uiteindelijk heb ik besloten mijn eigen iconen te behouden voor een consistentere look.</p>
+
+                    <h2 class="text-3xl font-bold mb-6 mt-10 text-black">Motivatie & onderbouwing</h2>
+                    <p>De uitbreiding naar 10 treinen was een verplichte aanpassing, maar ook een duidelijke verbetering: gebruikers krijgen nu in één oogopslag zicht op ongeveer een uur aan vertrektijden. Dit maakt het plannen eenvoudiger, zeker op drukke stations.</p>
+                    <p>De test met Material Symbols leverde geen beter resultaat op. Mijn bestaande iconen zijn duidelijk, passen visueel beter bij het ontwerp en zorgen voor een consistente gebruikerservaring.</p>
+                </div>
+            `
+        },
+        "5": {
+            title: "Week 5: Start met Code",
+            content: `
+                <div class="content-section">
+                    <h2 class="text-3xl font-bold mb-6 text-black">Wat heb ik deze week gedaan?</h2>
+                    <p>Deze week ben ik overgestapt van ontwerpen in Figma naar werken met HTML en CSS. Ik heb het lesmateriaal doorgenomen en YouTube-tutorials gekeken.</p>
+                    
+                    <h2 class="text-3xl font-bold mb-6 mt-10 text-black">Wat ik geleerd heb</h2>
+                    <ul class="list-disc ml-5 space-y-2">
+                        <li>HTML-structuur opbouwen met koppen, paragrafen en lijsten</li>
+                        <li>Basisstijl in CSS: kleuren, fonts en spacing</li>
+                    </ul>
+                </div>
+            `
+        },
+        "6": {
+            title: "Week 6: Zelfstudie & Responsive",
+            content: `
+                <div class="content-section">
+                    <h2 class="text-3xl font-bold mb-6 text-black">Trajectverloop & Ziekte</h2>
+                    <p>In week 6 begon ik moeite te krijgen met het volgen van de lessen, omdat ik ziek werd. Hierdoor merkte ik dat mijn motivatie tijdelijk afnam en ik minder actief kon deelnemen aan schoolactiviteiten. Om toch bij te blijven met de stof, heb ik ervoor gekozen om zelfstandig verder te werken via zelfstudie. Daarom heb ik vanaf dit moment tot en met week 12 geen wekelijkse documentatie kunnen bijhouden.</p>
+                    
+                    <h2 class="text-3xl font-bold mb-6 mt-10 text-black">Zelfstudie & AI</h2>
+                    <p>Ondanks mijn afwezigheid heb ik geprobeerd mijn kennis te blijven ontwikkelen. Ik heb verschillende YouTube-video’s bekeken over coderen om mijn begrip te verbeteren. Daarnaast heb ik gebruikgemaakt van AI als hulpmiddel om uitleg te krijgen en vragen te beantwoorden tijdens het leerproces.</p>
+
+                    <h2 class="text-3xl font-bold mb-6 mt-10 text-black">Figma & Responsive Design</h2>
+                    <p>Tijdens de laatste les ben ik alsnog aanwezig geweest om voorbeelden te bekijken en inzicht te krijgen in de verwachtingen van het project. Verder heb ik in Figma gewerkt aan mijn ontwerp. Ik heb het design interactief gemaakt en ervoor gezorgd dat het er goed uitziet en goed werkt op een mobiele telefoon (responsive design).</p>
+                </div>
+            `
+        },
+        "7": { title: "Week 7", content: "<p>Geen documentatie wegens zelfstudie (zie week 6).</p>" },
+        "8": { title: "Week 8", content: "<p>Geen documentatie wegens zelfstudie (zie week 6).</p>" },
+        "9": { title: "Week 9", content: "<p>Geen documentatie wegens zelfstudie (zie week 6).</p>" },
+        "10": { title: "Week 10", content: "<p>Geen documentatie wegens zelfstudie (zie week 6).</p>" },
+        "11": { title: "Week 11", content: "<p>Geen documentatie wegens zelfstudie (zie week 6).</p>" },
+        "12": { title: "Week 12", content: "<p>Geen documentatie wegens zelfstudie (zie week 6).</p>" }
+    };
+
+        // 2. LOGICA VOOR PAGINA & NAVIGATIE
+        const params = new URLSearchParams(window.location.search);
+        const currentWeek = parseInt(params.get('w'));
+        
+        const titleEl = document.getElementById('week-title');
+        const contentEl = document.getElementById('content-area');
+        const navArea = document.getElementById('navigation-area');
+
+        if (currentWeek && weekData[currentWeek]) {
+            // Content invullen
+            titleEl.innerText = weekData[currentWeek].title;
+            contentEl.innerHTML = weekData[currentWeek].content;
+            document.title = weekData[currentWeek].title;
+
+            // Navigatie knoppen genereren
+            let navHTML = '';
+
+            // KNOP: Vorige (Alleen als we niet bij week 1 zijn)
+            if (currentWeek > 1) {
+                navHTML += `
+                    <a href="week.html?w=${currentWeek - 1}" class="text-gray-500 font-bold hover:text-black flex items-center transition">
+                        <span class="mr-2">←</span> Vorige week
+                    </a>`;
+            } else {
+                navHTML += `<div></div>`; // Lege ruimte om layout goed te houden
+            }
+
+            // KNOP: Volgende (Alleen als de volgende week bestaat in weekData)
+            if (weekData[currentWeek + 1]) {
+                navHTML += `
+                    <a href="week.html?w=${currentWeek + 1}" class="bg-black text-white px-6 py-3 rounded-xl font-bold hover:bg-gray-800 transition transform hover:scale-105 shadow-lg flex items-center">
+                        Volgende week <span class="ml-2">→</span>
+                    </a>`;
+            }
+
+            navArea.innerHTML = navHTML;
+
+        } else {
+            titleEl.innerText = "Week niet gevonden";
+            contentEl.innerHTML = "<p>Ga terug naar de <a href='index.html' class='underline'>homepage</a> om een week te kiezen.</p>";
+        }
+    </script>
+</body>
+</html>
