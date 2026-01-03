@@ -51,12 +51,32 @@
             content: `
                 <div class="content-section">
                     <h2 class="text-3xl font-bold text-black mb-4">Wat heb ik gemaakt?</h2>
-                    <p>In de eerste week heb ik drie <span class="highlight">low-fidelity schetsen</span> ontworpen om de basisstructuur van mijn treininformatiesysteem te verkennen.</p>
-                    <p class="text-gray-500 italic">(Zie volledige tekst in eerdere code...)</p>
-                     <ul>
-                        <li><span class="highlight">Overzichtsscherm</span></li>
-                        <li><span class="highlight">Perronscherm</span></li>
-                        <li><span class="highlight">Wagonindelingsscherm</span></li>
+                    <p>In deze eerste week heb ik drie low-fidelity schetsen ontworpen om de basisstructuur van mijn treininformatiesysteem te verkennen.</p>
+                    <p class="mt-4">De drie schermen tonen verschillende gebruikssituaties:</p>
+                    <ol class="list-decimal ml-6 mt-2 space-y-2">
+                        <li><strong>Overzichtsscherm in de inkomhal</strong> – toont de eerstvolgende vertrekkende treinen met bestemming, perron, vertrektijd, type trein (S of IC) en eventuele vertraging.</li>
+                        <li><strong>Perronscherm</strong> – geeft de volgende tien treinen weer die vanaf één specifiek perron vertrekken, met extra informatie zoals tussenstops en status.</li>
+                        <li><strong>Wagonindelingsscherm</strong> – visualiseert de indeling van een trein, met iconen voor voorzieningen zoals rolstoeltoegang, fietsenstalling, wifi en toilet.</li>
+                    </ol>
+
+                    <h2 class="text-3xl font-bold text-black mt-8 mb-4">Waarom?</h2>
+                    <p>Het doel van deze eerste schetsfase was om te onderzoeken hoe reizigers in verschillende contexten — bij de ingang, op het perron of tijdens het instappen — zo snel mogelijk de juiste informatie kunnen vinden. Uit een korte feedbackronde met medestudenten bleek dat leesbaarheid en informatie-hiërarchie cruciaal zijn. De belangrijkste elementen moesten direct in het oog springen, zoals vertrektijd en bestemming.</p>
+
+                    <h2 class="text-3xl font-bold text-black mt-8 mb-4">UX/UI-vragen die mijn beslissingen bepaalden</h2>
+                    <ul class="list-disc ml-6 space-y-2">
+                        <li>Hoe maak ik de belangrijkste informatie (vertrektijd, bestemming) visueel dominant zonder dat het scherm te druk wordt?</li>
+                        <li>Hoeveel details kan ik tonen zonder de leesbaarheid op afstand te verliezen?</li>
+                        <li>Hoe zorg ik dat vertragingen en waarschuwingen onmiddellijk opvallen?</li>
+                    </ul>
+
+                    <h2 class="text-3xl font-bold text-black mt-8 mb-4">Trade-offs</h2>
+                    <p>Ik koos voor een tabelopzet omdat dit voor reizigers herkenbaar en overzichtelijk is, maar dit beperkt wel de visuele flexibiliteit. Bij het wagonindelingsscherm moest ik kiezen tussen realistische details of symbolische weergaven. Uiteindelijk koos ik voor eenvoudige iconen, zodat de informatie ook van een afstand begrijpbaar blijft.</p>
+
+                    <h2 class="text-3xl font-bold text-black mt-8 mb-4">Resultaten van snelle usability-check</h2>
+                    <ul class="list-disc ml-6 space-y-2">
+                        <li>Alle drie de testers konden binnen vijf seconden de juiste trein terugvinden op het overzichtsscherm.</li>
+                        <li>Één tester gaf aan dat het aanduiden van vertraging (bijv. “+ 50 min”) iets duidelijker mocht.</li>
+                        <li>Twee testers vonden de meertalige aanduiding (NL/FR) handig, maar merkten op dat het scherm daardoor iets druk oogt.</li>
                     </ul>
                 </div>
             `
@@ -66,11 +86,15 @@
             content: `
                 <div class="content-section">
                     <h2 class="text-3xl font-bold mb-6 text-black">Wat heb ik gedaan?</h2>
-                    <p>Deze week heb ik mijn papieren schetsen uit week 1 omgezet naar een <span class="font-bold text-black">mid-fidelity prototype</span> in Figma.</p>
-                    <h2 class="text-3xl font-bold mb-6 mt-10 text-black">Belangrijke ontwerpbeslissingen</h2>
-                    <ul class="space-y-4">
-                        <li><span class="font-bold text-black">Iconen in de header</span> en waarschuwingen.</li>
-                        <li><span class="font-bold text-black">Vertragingsinformatie</span> duidelijk gemaakt.</li>
+                    <p>Deze week heb ik de papieren schetsen uit week 1 omgezet naar een mid-fidelity prototype in Figma. De focus lag op het uitwerken en verfijnen van drie hoofschermen. Het prototype werd in zwart-wit uitgewerkt om de nadruk te leggen op informatie-architectuur en gebruikersflow, zonder afleiding door kleurgebruik.</p>
+
+                    <h2 class="text-3xl font-bold mb-6 mt-10 text-black">Belangrijkste ontwerpbeslissingen</h2>
+                    <ul class="list-disc ml-6 space-y-2">
+                        <li><strong>Iconen in de header:</strong> klok, locatie, treintype en waarschuwing toegevoegd om snelle visuele scanning mogelijk te maken. Gebruikers kunnen zo cruciale informatie herkennen zonder tekst te lezen.</li>
+                        <li><strong>Vertragingsinformatie:</strong> het label “+ 50 min” kreeg een aparte kolom met een waarschuwingsicoon.</li>
+                        <li><strong>Geannuleerde treinen:</strong> een universeel verboden-symbool gebruikt in plaats van rode tekst. Dit werkt taal- en cultuuronafhankelijk.</li>
+                        <li><strong>“Via”-informatie op het perronscherm:</strong> helpt reizigers de juiste trein te kiezen wanneer meerdere routes naar dezelfde stad bestaan.</li>
+                        <li><strong>Wagonindeling:</strong> laat reizigers zien waar voorzieningen zich bevinden, zodat ze zich tijdig op het perron kunnen positioneren.</li>
                     </ul>
                 </div>
             `
